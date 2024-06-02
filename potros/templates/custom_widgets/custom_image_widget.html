@@ -1,0 +1,8 @@
+{% if widget.is_initial %}
+    <div class="custom-file-input">
+        <img src="{{ widget.value.url }}" width="500" height="auto" alt="Current"/><br>
+        <input type="file" name="{{ widget.name }}" id="{{ widget.attrs.id }}">
+    </div>
+{% else %}
+    <input type="file" name="{{ widget.name }}" id="{{ widget.attrs.id }}">
+{% endif %}

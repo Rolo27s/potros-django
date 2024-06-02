@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración Fuengirola Potros</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'potros/css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido al Back-End de Fuengirola Potros</h1>
+    </header>
+    <main>
+        <section>
+            <a href="{% url 'admin:index' %}"><button>Login para administración</button></a>
+        </section>
+        <section>
+            <h2>Endpoints disponibles</h2>
+            <ul>
+                <li><a href="{% url 'noticias' %}">Noticias</a><span>............</span><span class="textEndPoint">/noticias</span></li>
+                <li><a href="{% url 'calendario' %}">Calendario</a><span>.......</span><span class="textEndPoint">/calendario</span></li>
+                <li><a href="{% url 'equipo' %}">Equipo</a><span>.............</span><span class="textEndPoint">/equipo</span></li>
+                <li><a href="{% url 'instagram' %}">Instagram</a><span>........</span><span class="textEndPoint">/instagram</span></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Nuestro Sitio. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
